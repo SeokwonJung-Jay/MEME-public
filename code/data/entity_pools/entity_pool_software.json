@@ -1,0 +1,738 @@
+{
+  "version": "v1",
+  "domain": "software_project",
+  "total_entities": 51,
+  "fictitious_naming": true,
+  "categories": [
+    {
+      "name": "Framework & Build",
+      "entities": [
+        {
+          "id": "framework",
+          "definition": "Web framework used by the project",
+          "role": "root",
+          "values": [
+            "Veltrion",
+            "Moxira",
+            "Quenthar",
+            "Dravex",
+            "Synthari",
+            "Korvel"
+          ]
+        },
+        {
+          "id": "build_tool",
+          "definition": "Build tool / bundler for the project",
+          "role": "middle",
+          "values": [
+            "Karnex Bundler",
+            "Tarvex CLI",
+            "Pyronis Build",
+            "Zelthra Pack",
+            "Quorix Forge",
+            "Dranith Compiler"
+          ]
+        },
+        {
+          "id": "build_command",
+          "definition": "CLI command to build the project",
+          "role": "leaf",
+          "values": [
+            "karnex build --prod",
+            "karnex build --dev",
+            "karnex build --analyze",
+            "tarvex compile --release",
+            "tarvex compile --debug",
+            "tarvex compile --watch",
+            "pyronis pack --optimize",
+            "pyronis pack --quick",
+            "pyronis pack --verbose",
+            "zelthra pack --minify",
+            "zelthra pack --sourcemap",
+            "quorix forge --target prod",
+            "quorix forge --target dev",
+            "dranith compile --emit bundle",
+            "dranith compile --emit modules"
+          ]
+        },
+        {
+          "id": "test_framework",
+          "definition": "Testing framework for the project",
+          "role": "middle",
+          "values": [
+            "Karnex Test",
+            "Tarvex Verify",
+            "Pyronis Check",
+            "Zelthra Assert",
+            "Quorix Spec",
+            "Dranith Probe"
+          ]
+        },
+        {
+          "id": "test_command",
+          "definition": "CLI command to run tests",
+          "role": "leaf",
+          "values": [
+            "karnex test --coverage",
+            "karnex test --watch",
+            "karnex test --ci",
+            "tarvex verify --all",
+            "tarvex verify --unit",
+            "tarvex verify --integration",
+            "pyronis check --full",
+            "pyronis check --quick",
+            "pyronis check --snapshot",
+            "zelthra assert --suite all",
+            "zelthra assert --suite unit",
+            "quorix spec --run all",
+            "quorix spec --run smoke",
+            "dranith probe --mode full",
+            "dranith probe --mode fast"
+          ]
+        },
+        {
+          "id": "project_structure",
+          "definition": "Directory layout convention of the project",
+          "role": "leaf",
+          "values": [
+            "monorepo with /apps and /packages",
+            "single-app with /src and /lib",
+            "modular with /modules and /shared",
+            "layered with /domain, /infra, /api",
+            "feature-based with /features and /core",
+            "workspace with /services and /common"
+          ]
+        },
+        {
+          "id": "dev_server_command",
+          "definition": "Command to start the local dev server",
+          "role": "leaf",
+          "values": [
+            "veltrion dev --port 3000",
+            "moxira serve --hot",
+            "quenthar start --watch",
+            "dravex run --dev --port 8080",
+            "synthari launch --hmr",
+            "korvel dev --open"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Data Layer",
+      "entities": [
+        {
+          "id": "database",
+          "definition": "Primary database used by the project",
+          "role": "root",
+          "values": [
+            "Crysthene DB",
+            "Vorathis DB",
+            "Thalnex Store",
+            "Pyravar Data",
+            "Zyndra Base",
+            "Keldaris DB"
+          ]
+        },
+        {
+          "id": "orm_library",
+          "definition": "ORM / data access library",
+          "role": "middle",
+          "values": [
+            "Crysthene ORM",
+            "Vorathis ODM",
+            "Thalnex Query",
+            "Pyravar Mapper",
+            "Zyndra Access",
+            "Keldaris Link"
+          ]
+        },
+        {
+          "id": "model_syntax",
+          "definition": "Syntax for defining data models in code",
+          "role": "leaf",
+          "values": [
+            "Crysthene.define('Model', {fields})",
+            "Crysthene.table('Model', columns)",
+            "Vorathis.schema('Model', {fields})",
+            "Vorathis.collection('Model', spec)",
+            "Thalnex.document('Model', {fields})",
+            "Thalnex.graph('Model', edges)",
+            "Pyravar.entity('Model', attrs)",
+            "Pyravar.record('Model', schema)",
+            "Zyndra.model('Model', {fields})",
+            "Zyndra.struct('Model', types)",
+            "Keldaris.object('Model', props)",
+            "Keldaris.node('Model', shape)"
+          ]
+        },
+        {
+          "id": "migration_tool",
+          "definition": "Database migration tool",
+          "role": "leaf",
+          "values": [
+            "Crysthene Migrate",
+            "Vorathis Evolve",
+            "Thalnex Schema",
+            "Pyravar Shift",
+            "Zyndra Alter",
+            "Keldaris Move"
+          ]
+        },
+        {
+          "id": "connection_string",
+          "definition": "Database connection string",
+          "role": "leaf",
+          "values": [
+            "crysthene://prod-db:5432/aurora",
+            "crysthene://replica-db:5432/aurora-ro",
+            "vorathis://cluster-main:27017/aurora",
+            "vorathis://cluster-secondary:27017/aurora",
+            "thalnex://store-prod:8529/aurora",
+            "thalnex://store-backup:8529/aurora",
+            "pyravar://data-primary:3306/aurora",
+            "zyndra://base-main:9042/aurora"
+          ]
+        },
+        {
+          "id": "backup_schedule",
+          "definition": "Database backup schedule",
+          "role": "leaf",
+          "values": [
+            "daily at 3am UTC",
+            "every 6 hours",
+            "weekly Sunday 2am UTC",
+            "daily at midnight KST",
+            "every 12 hours with 7-day retention",
+            "twice daily at 2am and 2pm UTC"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Deployment & Infra",
+      "entities": [
+        {
+          "id": "deploy_target",
+          "definition": "Where the project is deployed",
+          "role": "root",
+          "values": [
+            "Narvex Cloud",
+            "Zephyra Platform",
+            "Korinth Hosting",
+            "Thandrel Infra",
+            "Velturis Edge",
+            "Orinthal Serve"
+          ]
+        },
+        {
+          "id": "ci_config",
+          "definition": "CI/CD configuration file",
+          "role": "middle",
+          "values": [
+            "narvex-ci.yml",
+            "zephyra-pipeline.json",
+            "korinth-deploy.yaml",
+            "thandrel-flow.toml",
+            "velturis-ci.json",
+            "orinthal-build.yml"
+          ]
+        },
+        {
+          "id": "deploy_command",
+          "definition": "CLI command to deploy the project",
+          "role": "leaf",
+          "values": [
+            "narvex deploy --env prod",
+            "narvex deploy --env staging",
+            "zephyra push --target prod",
+            "zephyra push --target preview",
+            "korinth release --prod",
+            "korinth release --canary",
+            "thandrel ship --channel stable",
+            "thandrel ship --channel beta",
+            "velturis deploy --region us-east",
+            "velturis deploy --region ap-northeast",
+            "orinthal publish --tier production",
+            "orinthal publish --tier sandbox"
+          ]
+        },
+        {
+          "id": "monitoring_url",
+          "definition": "Monitoring dashboard URL",
+          "role": "leaf",
+          "values": [
+            "monitor.narvex.io/proj-aurora",
+            "dash.zephyra.io/aurora-42",
+            "watch.korinth.dev/aurora",
+            "metrics.thandrel.io/aurora-prod",
+            "observe.velturis.io/aurora",
+            "status.orinthal.dev/aurora"
+          ]
+        },
+        {
+          "id": "staging_url",
+          "definition": "Staging environment URL",
+          "role": "leaf",
+          "values": [
+            "staging.narvex.internal/aurora",
+            "preview.zephyra.io/aurora",
+            "stage.korinth.dev/aurora",
+            "sandbox.thandrel.io/aurora",
+            "test.velturis.internal/aurora",
+            "dev.orinthal.dev/aurora"
+          ]
+        },
+        {
+          "id": "docker_image",
+          "definition": "Docker image used for deployment",
+          "role": "middle",
+          "values": [
+            "narvex-registry/aurora:latest",
+            "zephyra-hub/aurora:prod",
+            "korinth-repo/aurora:stable",
+            "thandrel-images/aurora:release",
+            "velturis-cr/aurora:main",
+            "orinthal-registry/aurora:deploy"
+          ]
+        },
+        {
+          "id": "dockerfile_path",
+          "definition": "Path to the Dockerfile",
+          "role": "leaf",
+          "values": [
+            "deploy/Dockerfile.narvex",
+            "infra/narvex/Dockerfile",
+            "deploy/Dockerfile.zephyra",
+            "infra/zephyra/Dockerfile",
+            "deploy/Dockerfile.korinth",
+            "infra/korinth/Dockerfile",
+            "deploy/Dockerfile.thandrel",
+            "infra/thandrel/Dockerfile",
+            "deploy/Dockerfile.velturis",
+            "infra/velturis/Dockerfile",
+            "deploy/Dockerfile.orinthal",
+            "infra/orinthal/Dockerfile"
+          ]
+        },
+        {
+          "id": "log_drain_endpoint",
+          "definition": "Log drain / forwarding endpoint",
+          "role": "leaf",
+          "values": [
+            "logs.narvex.io/aurora/drain",
+            "drain.zephyra.io/proj-42",
+            "logs.korinth.dev/aurora",
+            "pipe.thandrel.io/aurora-logs",
+            "stream.velturis.io/aurora",
+            "sink.orinthal.dev/aurora"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team & Process",
+      "entities": [
+        {
+          "id": "team_lead",
+          "definition": "Current team lead for the project",
+          "role": "root",
+          "values": [
+            "Seokjin Kang",
+            "Yuna Park",
+            "Minjun Lee",
+            "Alex Kim",
+            "Sarah Chen",
+            "Jihoon Ryu"
+          ]
+        },
+        {
+          "id": "code_reviewer",
+          "definition": "Primary code reviewer",
+          "role": "leaf",
+          "values": [
+            "Haeun Jung",
+            "Seoyun Choi",
+            "David Lee",
+            "Emily Cho",
+            "Dohyun Kang",
+            "Sujin Yoo"
+          ]
+        },
+        {
+          "id": "escalation_contact",
+          "definition": "Person to escalate critical issues to",
+          "role": "leaf",
+          "values": [
+            "Jiwon Han",
+            "Seungmin Oh",
+            "Rachel Yoo",
+            "Kevin Park",
+            "Jaehyuk Yoon",
+            "Mina Kwon"
+          ]
+        },
+        {
+          "id": "approval_authority",
+          "definition": "Person with deploy / merge approval authority",
+          "role": "leaf",
+          "values": [
+            "VP Taehyun Kim",
+            "CTO Soyeon Park",
+            "Director James Lee",
+            "VP Helen Chen",
+            "CTO Soojung Lim",
+            "Director Hyunwoo Nam"
+          ]
+        },
+        {
+          "id": "weekly_report_recipient",
+          "definition": "Who receives the weekly status report",
+          "role": "leaf",
+          "values": [
+            "Taehyun Kim",
+            "Soyeon Park",
+            "James Lee",
+            "Helen Chen",
+            "Soojung Lim",
+            "Hyunwoo Nam"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Auth & Security",
+      "entities": [
+        {
+          "id": "auth_provider",
+          "definition": "Authentication service provider",
+          "role": "root",
+          "values": [
+            "Verithos Auth",
+            "Kryptal Auth",
+            "Zenthos ID",
+            "Phalanx Gate",
+            "Oathkeeper Pro",
+            "Cerberix Cloud"
+          ]
+        },
+        {
+          "id": "auth_method",
+          "definition": "Authentication method / protocol",
+          "role": "middle",
+          "values": [
+            "OAuth 2.0 + PKCE",
+            "JWT Bearer",
+            "Session Cookie + CSRF",
+            "API Key + HMAC",
+            "mTLS Client Cert",
+            "SAML 2.0 SSO"
+          ]
+        },
+        {
+          "id": "middleware_config",
+          "definition": "Auth middleware package and version",
+          "role": "leaf",
+          "values": [
+            "verithos-oauth-middleware v2.1",
+            "verithos-pkce-guard v1.4",
+            "kryptal-jwt-verify v3.0",
+            "kryptal-bearer-check v2.2",
+            "zenthos-session-middleware v1.8",
+            "zenthos-csrf-guard v1.1",
+            "phalanx-hmac-validator v2.0",
+            "phalanx-key-guard v1.3",
+            "oathkeeper-mtls-proxy v4.1",
+            "oathkeeper-cert-check v3.2",
+            "cerberix-saml-handler v2.5",
+            "cerberix-sso-bridge v1.9"
+          ]
+        },
+        {
+          "id": "token_format",
+          "definition": "Token format used for authentication",
+          "role": "leaf",
+          "values": [
+            "Verithos-JWT-v2",
+            "Kryptal-Token-RS256",
+            "Zenthos-Session-v1",
+            "Phalanx-HMAC-SHA256",
+            "Oathkeeper-mTLS-cert",
+            "Cerberix-SAML-assertion"
+          ]
+        },
+        {
+          "id": "login_endpoint",
+          "definition": "Login API endpoint path",
+          "role": "leaf",
+          "values": [
+            "/api/v2/auth/verithos/login",
+            "/auth/kryptal/signin",
+            "/zenthos/id/authenticate",
+            "/api/phalanx/key-exchange",
+            "/oathkeeper/mtls/handshake",
+            "/cerberix/saml/sso-init"
+          ]
+        },
+        {
+          "id": "user_session_ttl",
+          "definition": "User session time-to-live",
+          "role": "leaf",
+          "values": [
+            "15 minutes",
+            "30 minutes",
+            "1 hour",
+            "4 hours",
+            "8 hours",
+            "24 hours"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Miscellaneous",
+      "entities": [
+        {
+          "id": "error_log",
+          "definition": "A multi-line error log the user asked to remember verbatim",
+          "role": "orphan",
+          "exact_recall": true,
+          "value_type": "long_phrase",
+          "values": [
+            "ConnectionRefusedError: [Errno 111] Connection refused.\nService crysthene-db-primary on port 5432 is not accepting connections.\nLast successful heartbeat was at 2024-03-15T08:23:41Z.\nCheck firewall rules and verify that max_connections has not been exceeded.",
+            "PanicException: thread 'tokio-runtime-worker' panicked at 'index out of bounds: the len is 0 but the index is 5', src/handlers/auth.rs:142:23.\nStack trace shows recursive call in middleware_chain to request_validator to token_parser.\nRestart triggered automatic failover at 2024-04-02T14:18:33Z.",
+            "OutOfMemoryError: Java heap space.\nGC overhead limit exceeded after 8 consecutive failed collections in pool 'PS Old Gen'.\nHeap dump written to /var/log/aurora/heap-2024-05-08.hprof at 18:42:11Z.\nRecommend increasing -Xmx beyond 4G or investigating memory leak in OrderProcessor.",
+            "SegmentationFault at 0x00007fff5a3b2c40 in vorathis_query_planner.so.\nBacktrace: frame 0 query_optimize, frame 1 plan_join, frame 2 execute_select.\nCore dump saved to /var/crash/core.aurora.18923 on 2024-06-12T03:55:09Z.\nLast known good build was commit 7a4f9e2; bisect against recent migrations.",
+            "CertificateVerificationError: certificate chain validation failed for crysthene-db-primary.internal.\nSubject CN does not match expected hostname; chain depth 2 unverified.\nObserved at 2024-07-22T11:09:47Z by tls_handshake_listener.\nRotate the cert via Cryptara Vault and restart the connection pool to recover.",
+            "DeadlockDetected: transactions 4821 and 4823 are deadlocked on table aurora_orders.\nQuery 1 was UPDATE orders SET status = 'shipped' WHERE region = 'us-east'.\nQuery 2 was DELETE FROM orders WHERE created_at < NOW() - INTERVAL '30 days'.\nFirst seen at 2024-08-04T22:33:18Z; recommend serializable isolation review."
+          ]
+        },
+        {
+          "id": "sprint_deadline",
+          "definition": "Current sprint deadline date",
+          "role": "orphan",
+          "values": [
+            "2025 March 28",
+            "2025 April 11",
+            "2025 April 25",
+            "2025 May 9",
+            "2025 May 23",
+            "2025 June 6",
+            "2025 June 20",
+            "2025 July 4"
+          ]
+        },
+        {
+          "id": "secret_manager",
+          "definition": "Secret management service used by the project",
+          "role": "orphan",
+          "values": [
+            "Cryptara Vault",
+            "Selvex Secrets",
+            "Verisigil Lock",
+            "Kerberos Trove",
+            "Sigilix Manager",
+            "Pyronos Crypt",
+            "Velthri Keys",
+            "Orinthal Sealed"
+          ]
+        },
+        {
+          "id": "package_manager",
+          "definition": "Package manager used by the project",
+          "role": "orphan",
+          "values": [
+            "Karnex Pack",
+            "Tarvex Mod",
+            "Pyronis Bundle",
+            "Zelthra Lib",
+            "Quorix Hub",
+            "Dranith Stack",
+            "Veltrion Pkg",
+            "Synthari Modules"
+          ]
+        },
+        {
+          "id": "branch_strategy",
+          "definition": "Git branching strategy",
+          "role": "orphan",
+          "values": [
+            "trunk-based with feature flags",
+            "GitFlow with release branches",
+            "GitHub Flow with PR reviews",
+            "ship/show/ask branching",
+            "release-train with weekly cuts"
+          ]
+        },
+        {
+          "id": "design_system",
+          "definition": "UI design system / component library",
+          "role": "orphan",
+          "values": [
+            "Veltrion UI Kit v2",
+            "Moxira Components v3",
+            "Quenthar Design v1",
+            "Dravex Blocks v2.4",
+            "Synthari Elements v1.2"
+          ]
+        },
+        {
+          "id": "meeting_day",
+          "definition": "Regular team meeting schedule",
+          "role": "orphan",
+          "values": [
+            "every Wednesday 10am",
+            "every Thursday 2pm",
+            "every Monday 11am",
+            "every Tuesday 3pm",
+            "every Friday 9:30am"
+          ]
+        },
+        {
+          "id": "slack_channel",
+          "definition": "Primary team Slack channel",
+          "role": "orphan",
+          "values": [
+            "#aurora-dev",
+            "#aurora-eng",
+            "#aurora-core",
+            "#zenith-dev",
+            "#vortex-team"
+          ]
+        },
+        {
+          "id": "standup_format",
+          "definition": "Daily standup format",
+          "role": "orphan",
+          "values": [
+            "async written updates in Slack",
+            "15-min daily video call",
+            "Monday/Thursday sync, async rest",
+            "round-robin text post by 10am",
+            "weekly sync + daily async"
+          ]
+        },
+        {
+          "id": "default_branch",
+          "definition": "Default Git branch name",
+          "role": "orphan",
+          "values": [
+            "main",
+            "develop",
+            "trunk",
+            "release",
+            "production"
+          ]
+        },
+        {
+          "id": "release_cadence",
+          "definition": "How often the project ships releases",
+          "role": "orphan",
+          "values": [
+            "weekly on Tuesday",
+            "biweekly Friday afternoon",
+            "monthly first Monday",
+            "continuous deploy on merge",
+            "sprint-end release every 2 weeks"
+          ]
+        },
+        {
+          "id": "test_coverage_target",
+          "definition": "Required test coverage threshold",
+          "role": "orphan",
+          "values": [
+            "80% minimum overall",
+            "90% for core modules",
+            "70% overall, 95% for auth",
+            "85% line coverage required",
+            "no strict target, PR-reviewed"
+          ]
+        },
+        {
+          "id": "code_review_policy",
+          "definition": "Code review approval requirements",
+          "role": "orphan",
+          "values": [
+            "2 approvals required",
+            "1 approval + CI green",
+            "lead approval for core/",
+            "any team member can approve",
+            "2 approvals + security review for auth/"
+          ]
+        },
+        {
+          "id": "oncall_rotation",
+          "definition": "On-call rotation schedule",
+          "role": "orphan",
+          "values": [
+            "weekly Mon-Sun rotation",
+            "biweekly rotation",
+            "follow-the-sun across timezones",
+            "paired oncall (primary + secondary)",
+            "volunteer-based with weekly signup"
+          ]
+        },
+        {
+          "id": "alert_channel",
+          "definition": "Channel for production alerts",
+          "role": "orphan",
+          "values": [
+            "#aurora-alerts",
+            "#aurora-oncall-alerts",
+            "#aurora-pager",
+            "#zenith-incidents",
+            "#vortex-alerts"
+          ]
+        },
+        {
+          "id": "incident_runbook_url",
+          "definition": "URL for incident response runbook",
+          "role": "orphan",
+          "values": [
+            "runbooks.aurora.internal/playbooks",
+            "notion.so/aurora-team/incidents",
+            "docs.aurora.internal/runbooks",
+            "wiki.aurora.dev/incident-response",
+            "github.com/aurora-team/runbooks"
+          ]
+        },
+        {
+          "id": "documentation_url",
+          "definition": "Main project documentation URL",
+          "role": "orphan",
+          "values": [
+            "docs.aurora.internal/wiki",
+            "notion.so/aurora-team/docs",
+            "aurora-docs.readthedocs.io",
+            "github.com/aurora-team/docs",
+            "confluence.aurora.dev/aurora"
+          ]
+        },
+        {
+          "id": "onboarding_guide",
+          "definition": "New developer onboarding guide location",
+          "role": "orphan",
+          "values": [
+            "docs.aurora.internal/onboarding",
+            "notion.so/aurora-team/new-hire",
+            "github.com/aurora-team/onboarding",
+            "wiki.aurora.dev/getting-started",
+            "ONBOARDING.md in repo root"
+          ]
+        },
+        {
+          "id": "changelog_location",
+          "definition": "Where project changelog is maintained",
+          "role": "orphan",
+          "values": [
+            "CHANGELOG.md in repo root",
+            "GitHub Releases page",
+            "notion.so/aurora-team/releases",
+            "docs.aurora.internal/changelog",
+            "auto-generated from commit messages"
+          ]
+        }
+      ]
+    }
+  ]
+}

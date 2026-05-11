@@ -1,0 +1,10 @@
+dspy-ai>=2.5.0
+openai>=1.50.0
+anthropic>=0.40.0
+python-dotenv>=1.0
+tiktoken
+# anthropic is needed when --task-model (which is also the query/answer LM
+# for Karpathy) is set to a Claude model; the upstream
+# claude-memory-compiler routes via the Anthropic SDK in that case.
+# Optional: for local GPU inference of a custom prompt_model
+# vllm>=0.6.0

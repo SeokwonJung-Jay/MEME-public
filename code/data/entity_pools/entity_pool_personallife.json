@@ -1,0 +1,641 @@
+{
+  "version": "v3",
+  "total_entities": 39,
+  "fictitious_naming": true,
+  "categories": [
+    {
+      "name": "Living & Commute",
+      "entities": [
+        {
+          "id": "residence_location",
+          "definition": "City or neighborhood where the user currently lives",
+          "role": "root",
+          "values": [
+            "Quivira Springs",
+            "Thornvale Crossing",
+            "Zaravel Heights",
+            "Belvona Harbor",
+            "Luminara Flats",
+            "Tesswick Bay",
+            "Corenth Hills",
+            "Keldara Grove",
+            "Pyresta Meadow",
+            "Orinthal Park",
+            "Velturis Glen",
+            "Cymbeline Shores"
+          ]
+        },
+        {
+          "id": "housing_type",
+          "definition": "Type or form of current housing",
+          "role": "leaf",
+          "values": [
+            "studio apartment",
+            "one-bedroom apartment",
+            "two-bedroom apartment",
+            "shared house",
+            "condo",
+            "townhouse",
+            "single-family house",
+            "dormitory"
+          ]
+        },
+        {
+          "id": "living_arrangement",
+          "definition": "Who the user currently lives with",
+          "role": "middle",
+          "values": [
+            "alone",
+            "with roommate",
+            "with partner",
+            "with partner and child",
+            "with parents",
+            "with sibling"
+          ]
+        },
+        {
+          "id": "commute_method",
+          "definition": "How the user gets to work or school",
+          "role": "leaf",
+          "values": [
+            "subway",
+            "bus",
+            "car",
+            "bike",
+            "walking",
+            "subway + bus transfer",
+            "commuter rail",
+            "remote (no commute)"
+          ]
+        },
+        {
+          "id": "commute_duration",
+          "definition": "How long the user's commute takes one way",
+          "role": "leaf",
+          "values": [
+            "10 min",
+            "15 min",
+            "20 min",
+            "30 min",
+            "40 min",
+            "50 min",
+            "1 hour",
+            "1.5 hours"
+          ]
+        },
+        {
+          "id": "vehicle",
+          "definition": "Personal vehicle ownership or status",
+          "role": "leaf",
+          "values": [
+            "Zyvanta Sedan",
+            "Therwyn Compact",
+            "Quorvel EV",
+            "Dranthis Pickup",
+            "Vorantel SUV",
+            "Xylorim Scooter",
+            "none"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Work",
+      "entities": [
+        {
+          "id": "employer",
+          "definition": "Company or organization the user works for",
+          "role": "root",
+          "values": [
+            "Zypherix Labs",
+            "Thalwren Inc.",
+            "Vornellis Corp.",
+            "Quenlix Group",
+            "Caeltura Systems",
+            "Nexturi AI",
+            "Dranthex Logistics",
+            "Korvath & Co.",
+            "Elyndra Health",
+            "freelance"
+          ]
+        },
+        {
+          "id": "job_title",
+          "definition": "Current role or position at work",
+          "role": "leaf",
+          "values": [
+            "intern",
+            "junior engineer",
+            "senior engineer",
+            "staff engineer",
+            "engineering manager",
+            "product manager",
+            "designer",
+            "data scientist",
+            "marketing lead",
+            "team lead"
+          ]
+        },
+        {
+          "id": "work_location",
+          "definition": "Physical location of the user's office",
+          "role": "middle",
+          "values": [
+            "Quivira Springs",
+            "Thornvale Crossing",
+            "Dravenna Point",
+            "Zaravel Heights",
+            "Belvona Harbor",
+            "Luminara Flats",
+            "Tesswick Bay",
+            "Corenth Hills",
+            "remote"
+          ]
+        },
+        {
+          "id": "work_schedule",
+          "definition": "Regular working hours or shift pattern",
+          "role": "leaf",
+          "values": [
+            "9-to-5 fixed",
+            "10-to-7 fixed",
+            "flexible hours",
+            "shift work (day)",
+            "shift work (night)",
+            "4-day work week",
+            "hybrid (3 office + 2 remote)"
+          ]
+        },
+        {
+          "id": "work_project",
+          "definition": "Specific project or task currently working on",
+          "role": "leaf",
+          "values": [
+            "mobile app development",
+            "backend migration",
+            "new product launch",
+            "marketing campaign",
+            "data pipeline build",
+            "ML model training",
+            "infrastructure upgrade",
+            "UX research"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Health & Fitness",
+      "entities": [
+        {
+          "id": "health_condition",
+          "definition": "Any diagnosed illness, injury, or physical condition",
+          "role": "root",
+          "values": [
+            "herniated disc",
+            "lactose intolerance",
+            "seasonal allergies",
+            "high blood pressure",
+            "pre-diabetes",
+            "chronic migraine",
+            "tendinitis",
+            "acid reflux",
+            "anxiety disorder",
+            "none"
+          ]
+        },
+        {
+          "id": "medication",
+          "definition": "Drugs, supplements, or vitamins taken regularly",
+          "role": "leaf",
+          "values": [
+            "Thrynexol",
+            "Zorvaphen",
+            "Quelmithin",
+            "Velnorath",
+            "Dyntheral",
+            "Xyravine",
+            "Korathril",
+            "multivitamin",
+            "none"
+          ]
+        },
+        {
+          "id": "exercise_routine",
+          "definition": "Regular workout pattern",
+          "role": "middle",
+          "values": [
+            "running 3x/week",
+            "yoga 2x/week",
+            "weight training 4x/week",
+            "swimming 2x/week",
+            "pilates 3x/week",
+            "cycling weekends",
+            "walking daily",
+            "none"
+          ]
+        },
+        {
+          "id": "fitness_facility",
+          "definition": "Gym, pool, or sports center the user attends",
+          "role": "leaf",
+          "values": [
+            "Zorathel Peak Gym",
+            "Velthari Studio",
+            "Crysthene Pool",
+            "Pyravar CrossFit",
+            "Kaelstrom Fitness",
+            "Thandrel YMCA",
+            "home gym",
+            "none"
+          ]
+        },
+        {
+          "id": "sleep_pattern",
+          "definition": "Typical sleep and wake schedule",
+          "role": "leaf",
+          "values": [
+            "10pm-6am",
+            "11pm-7am",
+            "midnight-8am",
+            "1am-9am",
+            "irregular",
+            "11pm-5:30am (early riser)",
+            "varies by shift"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Food & Diet",
+      "entities": [
+        {
+          "id": "diet_preference",
+          "definition": "General eating habits or dietary philosophy",
+          "role": "middle",
+          "values": [
+            "omnivore",
+            "vegetarian",
+            "vegan",
+            "pescatarian",
+            "keto",
+            "paleo",
+            "Mediterranean",
+            "flexitarian (weekday vegetarian)",
+            "no red meat"
+          ]
+        },
+        {
+          "id": "dietary_restriction",
+          "definition": "Specific foods avoided for health or medical reasons",
+          "role": "leaf",
+          "values": [
+            "gluten-free",
+            "dairy-free",
+            "low-sodium",
+            "low-sugar",
+            "nut-free",
+            "no alcohol",
+            "no caffeine",
+            "no processed food",
+            "none"
+          ]
+        },
+        {
+          "id": "favorite_restaurant",
+          "definition": "Go-to restaurant or dining spot",
+          "role": "leaf",
+          "values": [
+            "Zefiro's Kitchen",
+            "Quirenth Leaf Cafe",
+            "The Ondreth Pot",
+            "Velmara Taqueria",
+            "Thyssel Lane",
+            "Lorwen & Sage",
+            "Kinthar Grill",
+            "Aelrith Bistro"
+          ]
+        },
+        {
+          "id": "food_allergy",
+          "definition": "Foods that cause allergic reactions",
+          "role": "leaf",
+          "values": [
+            "peanuts",
+            "tree nuts",
+            "shellfish",
+            "dairy",
+            "eggs",
+            "gluten (celiac)",
+            "soy",
+            "none"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Family",
+      "entities": [
+        {
+          "id": "relationship_status",
+          "definition": "Current romantic or marital status",
+          "role": "root",
+          "values": [
+            "single",
+            "dating",
+            "in a relationship",
+            "engaged",
+            "married",
+            "separated",
+            "divorced"
+          ]
+        },
+        {
+          "id": "partner",
+          "definition": "Name or identity of significant other",
+          "role": "orphan",
+          "values": [
+            "Sarah",
+            "Emily",
+            "Jessica",
+            "Mike",
+            "James",
+            "Alex",
+            "Jordan",
+            "Chris",
+            "Taylor",
+            "none"
+          ]
+        },
+        {
+          "id": "family_event",
+          "definition": "Upcoming or recent significant family occasion",
+          "role": "leaf",
+          "values": [
+            "parent's birthday",
+            "sibling's wedding",
+            "baby shower",
+            "family reunion",
+            "Thanksgiving gathering",
+            "child's school event",
+            "anniversary dinner",
+            "none currently"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Finance",
+      "entities": [
+        {
+          "id": "financial_goal",
+          "definition": "Current saving, investment, or debt target",
+          "role": "leaf",
+          "values": [
+            "saving for house down payment",
+            "paying off student loans",
+            "building emergency fund",
+            "saving for wedding",
+            "maxing out retirement fund",
+            "paying off credit card debt",
+            "saving for kids' education fund"
+          ]
+        },
+        {
+          "id": "insurance",
+          "definition": "Insurance coverage and provider",
+          "role": "leaf",
+          "values": [
+            "employer-provided health plan",
+            "marketplace health plan",
+            "interim coverage plan",
+            "dental + vision bundle",
+            "no insurance",
+            "employer + supplemental"
+          ]
+        },
+        {
+          "id": "subscription_service",
+          "definition": "Paid services subscribed to monthly",
+          "role": "orphan",
+          "values": [
+            "Xelvoria",
+            "Thyranote",
+            "Zorvista Premium",
+            "Daily Journal subscription",
+            "meal kit (Kelvimeal)",
+            "Dranthazon",
+            "Pyrethon Plus",
+            "none"
+          ]
+        },
+        {
+          "id": "planned_purchase",
+          "definition": "Significant item being researched or planned to buy",
+          "role": "orphan",
+          "values": [
+            "new laptop",
+            "gaming PC",
+            "electric car",
+            "new couch",
+            "stand-up desk",
+            "road bike",
+            "camera",
+            "engagement ring",
+            "no major purchase planned"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Schedule",
+      "entities": [
+        {
+          "id": "travel_plan",
+          "definition": "Upcoming trip or vacation being planned",
+          "role": "leaf",
+          "values": [
+            "Zynthera Bay beach trip (1 week)",
+            "mountain ski trip",
+            "cross-country road trip (2 weeks)",
+            "visiting family in Corenth Hills",
+            "island getaway",
+            "hiking trip out west",
+            "no travel planned"
+          ]
+        },
+        {
+          "id": "regular_appointment",
+          "definition": "Recurring appointment the user has",
+          "role": "leaf",
+          "values": [
+            "therapy (weekly)",
+            "dentist (every 6 months)",
+            "physical therapy (2x/week)",
+            "dermatologist (monthly)",
+            "chiropractor (biweekly)",
+            "tutoring session (weekly)",
+            "none"
+          ]
+        },
+        {
+          "id": "upcoming_event",
+          "definition": "One-time event the user is attending soon",
+          "role": "orphan",
+          "values": [
+            "tech conference",
+            "friend's wedding",
+            "concert",
+            "half-marathon",
+            "company offsite",
+            "college reunion",
+            "housewarming party",
+            "none currently"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hobbies",
+      "entities": [
+        {
+          "id": "hobby",
+          "definition": "Leisure activity done regularly for fun",
+          "role": "orphan",
+          "values": [
+            "guitar",
+            "drawing/painting",
+            "photography",
+            "cooking",
+            "woodworking",
+            "gardening",
+            "reading",
+            "video games",
+            "pottery",
+            "knitting"
+          ]
+        },
+        {
+          "id": "sports",
+          "definition": "Sport played regularly, including partners",
+          "role": "orphan",
+          "values": [
+            "tennis",
+            "basketball",
+            "soccer",
+            "rock climbing",
+            "running club",
+            "cycling",
+            "golf",
+            "volleyball",
+            "pickleball",
+            "none"
+          ]
+        },
+        {
+          "id": "club_membership",
+          "definition": "Organized group or club the user belongs to",
+          "role": "orphan",
+          "values": [
+            "hiking club",
+            "book club",
+            "running club",
+            "board game group",
+            "cycling club",
+            "volunteer group",
+            "wine tasting club",
+            "none"
+          ]
+        },
+        {
+          "id": "media_consumption",
+          "definition": "Shows, books, podcasts currently being consumed",
+          "role": "orphan",
+          "values": [
+            "The Veldrakon Spiral (TV)",
+            "Whispers of Zarinthea (TV)",
+            "a true crime podcast",
+            "The Quorath Codex (book)",
+            "a daily news podcast",
+            "Thyrelion (anime)",
+            "a history documentary series",
+            "Xelvari Dawn (book)"
+          ]
+        },
+        {
+          "id": "social_gathering",
+          "definition": "Regular social meetup the user attends",
+          "role": "orphan",
+          "values": [
+            "pickup basketball Saturdays",
+            "brunch with college friends monthly",
+            "game night with neighbors",
+            "trivia night Wednesdays",
+            "potluck dinner group",
+            "none"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Miscellaneous",
+      "entities": [
+        {
+          "id": "pet",
+          "definition": "User's pet — species, name, age, health",
+          "role": "middle",
+          "values": [
+            "cat (Luna, 3 yrs)",
+            "dog (Max, 5 yrs)",
+            "golden retriever (Buddy, 2 yrs)",
+            "cat (Mochi, 8 yrs)",
+            "French bulldog (Bean, 1 yr)",
+            "no pet"
+          ]
+        },
+        {
+          "id": "school",
+          "definition": "Educational institution currently attending",
+          "role": "root",
+          "values": [
+            "MBA at Vorenthal Business School",
+            "MS in CS at Quessara University",
+            "Quivira Springs Community College",
+            "online bootcamp (coding)",
+            "part-time JD at Belvona Harbor Law",
+            "not currently enrolled"
+          ]
+        },
+        {
+          "id": "skill_acquisition",
+          "definition": "New skill or language currently being learned",
+          "role": "leaf",
+          "values": [
+            "Spanish",
+            "Japanese",
+            "Python programming",
+            "data analytics",
+            "public speaking",
+            "piano",
+            "sign language",
+            "not currently learning anything"
+          ]
+        },
+        {
+          "id": "life_philosophy",
+          "definition": "A long-form life philosophy or quote the user asked to remember verbatim",
+          "role": "orphan",
+          "exact_recall": true,
+          "value_type": "long_phrase",
+          "values": [
+            "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.",
+            "Most people never run far enough on their first wind to find out they've got a second. Give your dreams all you've got and you'll be amazed at the energy that comes out of you.",
+            "In three words I can sum up everything I've learned about life: it goes on. You'll have bad times, but it will always wake you up to the stuff you weren't paying attention to.",
+            "Try not to become a man of success, but rather try to become a man of value. Look around at how people want to get more out of life than they put in. A man of value will give more than he receives.",
+            "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails. Explore, dream, discover.",
+            "We are what we repeatedly do. Excellence, then, is not an act, but a habit. The whole is greater than the sum of its parts. We must become the change we wish to see in the world."
+          ]
+        }
+      ]
+    }
+  ]
+}

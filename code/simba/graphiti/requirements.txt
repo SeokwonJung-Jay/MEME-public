@@ -1,0 +1,11 @@
+dspy-ai>=2.5.0
+openai>=1.50.0
+anthropic>=0.40.0
+python-dotenv>=1.0
+tiktoken
+# graphiti_core — needed for prompt_library monkey-patching and add_episode/search
+graphiti-core>=0.12
+# Neo4j Python driver — used by GraphitiProgram for group cleanup
+neo4j>=5.20
+# Optional: for local GPU inference of Llama prompt_model
+# vllm>=0.6.0

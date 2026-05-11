@@ -1,0 +1,248 @@
+{
+  "version": "v3",
+  "total_edges": 34,
+  "edges": [
+    {
+      "source": "residence_location",
+      "target": "commute_method",
+      "pattern": "infrastructure",
+      "declaration_example": "I take the subway because I live in Quivira Springs. There's no subway line in Thornvale Crossing — people just drive there."
+    },
+    {
+      "source": "residence_location",
+      "target": "commute_duration",
+      "pattern": "distance",
+      "declaration_example": "The nice thing about living in Quivira Springs is I'm only 20 minutes from the office. If I lived further out it'd be way longer."
+    },
+    {
+      "source": "residence_location",
+      "target": "favorite_restaurant",
+      "pattern": "proximity",
+      "declaration_example": "I go to Zefiro's Kitchen all the time — it's right around the corner from my apartment in Quivira Springs."
+    },
+    {
+      "source": "residence_location",
+      "target": "fitness_facility",
+      "pattern": "proximity",
+      "declaration_example": "I work out at Zorathel Peak Gym because it's a 5-minute walk from my place in Quivira Springs."
+    },
+    {
+      "source": "residence_location",
+      "target": "regular_appointment",
+      "pattern": "proximity",
+      "declaration_example": "I see Dr. Hahn every Thursday — her office is in Quivira Springs, close to where I live."
+    },
+    {
+      "source": "employer",
+      "target": "job_title",
+      "pattern": "company_policy",
+      "declaration_example": "I'm a senior engineer at Zypherix Labs. That's the title they gave me when I joined."
+    },
+    {
+      "source": "employer",
+      "target": "work_location",
+      "pattern": "company_policy",
+      "declaration_example": "Zypherix Labs is based in Dravenna Point, so that's where I go to work every day."
+    },
+    {
+      "source": "employer",
+      "target": "work_schedule",
+      "pattern": "company_policy",
+      "declaration_example": "At Zypherix Labs we do flexible hours — I usually go in around 10."
+    },
+    {
+      "source": "employer",
+      "target": "work_project",
+      "pattern": "company_policy",
+      "declaration_example": "Right now at Zypherix Labs I'm on the backend migration project."
+    },
+    {
+      "source": "employer",
+      "target": "insurance",
+      "pattern": "company_policy",
+      "declaration_example": "I get my health insurance through Zypherix Labs — it's an employer plan."
+    },
+    {
+      "source": "work_location",
+      "target": "commute_method",
+      "pattern": "infrastructure",
+      "declaration_example": "Since our office is in Dravenna Point, I drive to work. There's no real public transit out there."
+    },
+    {
+      "source": "work_location",
+      "target": "commute_duration",
+      "pattern": "distance",
+      "declaration_example": "The Dravenna Point office is about 40 minutes from my apartment."
+    },
+    {
+      "source": "work_location",
+      "target": "favorite_restaurant",
+      "pattern": "proximity",
+      "declaration_example": "There's this great taco place near the Dravenna Point office — Velmara Taqueria. I go there for lunch almost every day."
+    },
+    {
+      "source": "work_location",
+      "target": "fitness_facility",
+      "pattern": "proximity",
+      "declaration_example": "I signed up at Velthari Studio because it's right next to our Dravenna Point office."
+    },
+    {
+      "source": "health_condition",
+      "target": "medication",
+      "pattern": "medical_causation",
+      "declaration_example": "Since I was diagnosed with high blood pressure, the doctor put me on Thrynexol."
+    },
+    {
+      "source": "health_condition",
+      "target": "dietary_restriction",
+      "pattern": "medical_causation",
+      "declaration_example": "My doctor said I need to go low-sodium because of my high blood pressure."
+    },
+    {
+      "source": "health_condition",
+      "target": "exercise_routine",
+      "pattern": "medical_causation",
+      "declaration_example": "I used to do weight training, but my doctor told me to switch to something low-impact because of my back issues."
+    },
+    {
+      "source": "health_condition",
+      "target": "sleep_pattern",
+      "pattern": "medical_causation",
+      "declaration_example": "Ever since the anxiety got worse, I haven't been able to fall asleep before 1am."
+    },
+    {
+      "source": "health_condition",
+      "target": "regular_appointment",
+      "pattern": "medical_causation",
+      "declaration_example": "I need to see Dr. Patel every two weeks now to monitor my blood pressure."
+    },
+    {
+      "source": "exercise_routine",
+      "target": "fitness_facility",
+      "pattern": "activity_facility",
+      "declaration_example": "I switched to swimming, so I signed up at Crysthene Pool instead of the gym."
+    },
+    {
+      "source": "diet_preference",
+      "target": "favorite_restaurant",
+      "pattern": "preference",
+      "declaration_example": "Ever since I went vegetarian, I've been going to Quirenth Leaf Cafe instead — they have way more options for me."
+    },
+    {
+      "source": "relationship_status",
+      "target": "living_arrangement",
+      "pattern": "life_event",
+      "declaration_example": "Now that Sarah and I are engaged, we moved in together."
+    },
+    {
+      "source": "relationship_status",
+      "target": "housing_type",
+      "pattern": "life_event",
+      "declaration_example": "We needed a bigger place after getting engaged, so we got a two-bedroom apartment."
+    },
+    {
+      "source": "relationship_status",
+      "target": "financial_goal",
+      "pattern": "priority_shift",
+      "declaration_example": "With the wedding coming up, we're saving for that instead of the house down payment."
+    },
+    {
+      "source": "relationship_status",
+      "target": "travel_plan",
+      "pattern": "life_event",
+      "declaration_example": "We're planning a trip to celebrate our engagement — thinking about Zynthera Bay for a week."
+    },
+    {
+      "source": "relationship_status",
+      "target": "family_event",
+      "pattern": "life_event",
+      "declaration_example": "Now that we're engaged, we need to plan the engagement party for next month."
+    },
+    {
+      "source": "living_arrangement",
+      "target": "housing_type",
+      "pattern": "life_event",
+      "declaration_example": "My roommate moved out, so I'm looking at a smaller one-bedroom apartment to save on rent."
+    },
+    {
+      "source": "living_arrangement",
+      "target": "financial_goal",
+      "pattern": "priority_shift",
+      "declaration_example": "Now that I'm splitting rent with my partner, I can put more toward paying off my student loans."
+    },
+    {
+      "source": "pet",
+      "target": "financial_goal",
+      "pattern": "priority_shift",
+      "declaration_example": "With the new puppy, vet bills are adding up, so I'm putting the vacation fund on hold."
+    },
+    {
+      "source": "pet",
+      "target": "housing_type",
+      "pattern": "life_event",
+      "declaration_example": "Our building doesn't allow dogs, so we need to find a pet-friendly place."
+    },
+    {
+      "source": "school",
+      "target": "skill_acquisition",
+      "pattern": "curriculum",
+      "declaration_example": "I'm in a data analytics bootcamp now, so I'm learning Python as part of the coursework."
+    },
+    {
+      "source": "school",
+      "target": "work_schedule",
+      "pattern": "schedule_conflict",
+      "declaration_example": "My evening classes start at 6, so I switched to the early shift at work."
+    },
+    {
+      "source": "school",
+      "target": "financial_goal",
+      "pattern": "priority_shift",
+      "declaration_example": "With tuition bills, I'm focused on building an emergency fund rather than investing."
+    },
+    {
+      "source": "school",
+      "target": "commute_method",
+      "pattern": "infrastructure",
+      "declaration_example": "I started taking the bus because it goes straight to campus."
+    }
+  ],
+  "patterns": {
+    "proximity": {
+      "description": "I go to X because it's near where I live/work",
+      "edge_count": 6
+    },
+    "infrastructure": {
+      "description": "I do X because Y has/doesn't have Z",
+      "edge_count": 3
+    },
+    "distance": {
+      "description": "X is N minutes from Y",
+      "edge_count": 2
+    },
+    "company_policy": {
+      "description": "At my company/school, we do X",
+      "edge_count": 6
+    },
+    "medical_causation": {
+      "description": "Because of my condition, the doctor said X",
+      "edge_count": 5
+    },
+    "life_event": {
+      "description": "Now that X happened, we need to Y",
+      "edge_count": 10
+    },
+    "priority_shift": {
+      "description": "With X expense/change, I'm focused on Y instead of Z",
+      "edge_count": 5
+    },
+    "activity_facility": {
+      "description": "I switched to X activity, so I need Y facility",
+      "edge_count": 2
+    },
+    "schedule_conflict": {
+      "description": "My X is at Y time, so I changed Z",
+      "edge_count": 2
+    }
+  }
+}

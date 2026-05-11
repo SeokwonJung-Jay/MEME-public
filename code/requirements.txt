@@ -1,0 +1,30 @@
+# MEME benchmark — main requirements (covers BM25, dense, MD-flat, Karpathy, judge, oracle)
+#
+# Some memory systems require additional packages and (in practice) separate
+# Python venvs due to dependency conflicts. See requirements/ for per-system files
+# and scripts/setup_venvs.sh for one-click setup.
+
+# Core LLM clients
+openai>=2.0
+anthropic>=0.40
+python-dotenv>=1.0
+
+# Hugging Face dataset download (used by README quick-start)
+huggingface_hub>=0.28
+
+# Tokenization (used across systems)
+tiktoken>=0.7
+
+# Numerical (used by dense retrieval and stats)
+numpy>=1.26
+
+# Sparse retrieval (BM25): bm25s for agent baselines, rank-bm25 for filler-conflict filter
+bm25s>=0.2
+rank-bm25>=0.2
+
+# Pydantic (used by graphiti / structured outputs in modern openai)
+pydantic>=2.0
+
+# Karpathy Wiki agent wraps coleam00/claude-memory-compiler (requires Python >=3.12)
+claude-agent-sdk>=0.1.29
+tzdata>=2024.1

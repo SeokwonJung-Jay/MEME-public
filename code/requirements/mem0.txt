@@ -1,0 +1,8 @@
+# Mem0 memory system — separate venv recommended.
+# Setup: python3 -m venv .venvs/mem0_env && source .venvs/mem0_env/bin/activate
+#        pip install -r requirements.txt -r requirements/mem0.txt
+#
+# Backing service: Qdrant (port 6333). See docker-compose.yml.
+
+mem0ai>=2.0
+qdrant-client>=1.17

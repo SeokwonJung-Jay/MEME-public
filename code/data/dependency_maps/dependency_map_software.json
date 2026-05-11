@@ -1,0 +1,169 @@
+{
+  "version": "v1",
+  "domain": "software_project",
+  "total_edges": 27,
+  "edges": [
+    {
+      "source": "framework",
+      "target": "build_tool",
+      "pattern": "tech_compatibility",
+      "declaration_example": "We use Karnex Bundler because it's the official build tool for Veltrion projects."
+    },
+    {
+      "source": "framework",
+      "target": "test_framework",
+      "pattern": "tech_compatibility",
+      "declaration_example": "We use Karnex Test for testing since it integrates natively with Veltrion."
+    },
+    {
+      "source": "framework",
+      "target": "project_structure",
+      "pattern": "tech_compatibility",
+      "declaration_example": "We follow the src/pages/ layout because that's the Veltrion convention."
+    },
+    {
+      "source": "framework",
+      "target": "dev_server_command",
+      "pattern": "tech_compatibility",
+      "declaration_example": "To run the dev server, use 'veltrion dev --port 3000' — that's how Veltrion projects start locally."
+    },
+    {
+      "source": "build_tool",
+      "target": "build_command",
+      "pattern": "derived_config",
+      "declaration_example": "Since we use Karnex Bundler, the build command is 'karnex build --prod'."
+    },
+    {
+      "source": "test_framework",
+      "target": "test_command",
+      "pattern": "derived_config",
+      "declaration_example": "With Karnex Test, you run tests using 'karnex test --coverage'."
+    },
+    {
+      "source": "database",
+      "target": "orm_library",
+      "pattern": "data_layer",
+      "declaration_example": "We use Crysthene ORM because it's built for Crysthene DB."
+    },
+    {
+      "source": "database",
+      "target": "migration_tool",
+      "pattern": "data_layer",
+      "declaration_example": "For migrations we use Crysthene Migrate — it's designed for Crysthene DB schemas."
+    },
+    {
+      "source": "database",
+      "target": "connection_string",
+      "pattern": "data_layer",
+      "declaration_example": "The connection string is crysthene://prod-db:5432/aurora — standard Crysthene DB format."
+    },
+    {
+      "source": "database",
+      "target": "backup_schedule",
+      "pattern": "data_layer",
+      "declaration_example": "We do daily backups at 3am UTC for the Crysthene DB cluster."
+    },
+    {
+      "source": "orm_library",
+      "target": "model_syntax",
+      "pattern": "derived_config",
+      "declaration_example": "With Crysthene ORM, models are defined as Crysthene.define('User', {fields})."
+    },
+    {
+      "source": "deploy_target",
+      "target": "ci_config",
+      "pattern": "infra_coupling",
+      "declaration_example": "Our CI runs on narvex-ci.yml since we deploy to Narvex Cloud."
+    },
+    {
+      "source": "deploy_target",
+      "target": "monitoring_url",
+      "pattern": "infra_coupling",
+      "declaration_example": "Monitoring is at monitor.narvex.io/proj-aurora — it's built into Narvex Cloud."
+    },
+    {
+      "source": "deploy_target",
+      "target": "staging_url",
+      "pattern": "infra_coupling",
+      "declaration_example": "Staging is at staging.narvex.internal/aurora — Narvex provides it automatically."
+    },
+    {
+      "source": "deploy_target",
+      "target": "docker_image",
+      "pattern": "infra_coupling",
+      "declaration_example": "We push to narvex-registry/aurora:latest since Narvex Cloud uses their own registry."
+    },
+    {
+      "source": "deploy_target",
+      "target": "log_drain_endpoint",
+      "pattern": "infra_coupling",
+      "declaration_example": "Logs go to logs.narvex.io/aurora/drain — that's Narvex's log aggregation."
+    },
+    {
+      "source": "ci_config",
+      "target": "deploy_command",
+      "pattern": "derived_config",
+      "declaration_example": "In narvex-ci.yml, the deploy step runs 'narvex deploy --env prod'."
+    },
+    {
+      "source": "docker_image",
+      "target": "dockerfile_path",
+      "pattern": "derived_config",
+      "declaration_example": "The Dockerfile for narvex-registry/aurora is at deploy/Dockerfile.narvex."
+    },
+    {
+      "source": "team_lead",
+      "target": "code_reviewer",
+      "pattern": "team_assignment",
+      "declaration_example": "Seokjin assigned Haeun as the primary code reviewer for our team."
+    },
+    {
+      "source": "team_lead",
+      "target": "escalation_contact",
+      "pattern": "team_assignment",
+      "declaration_example": "If something's urgent, Seokjin told us to escalate to Jiwon."
+    },
+    {
+      "source": "team_lead",
+      "target": "approval_authority",
+      "pattern": "team_assignment",
+      "declaration_example": "Under Seokjin's team, VP Taehyun Kim has deployment approval authority."
+    },
+    {
+      "source": "team_lead",
+      "target": "weekly_report_recipient",
+      "pattern": "team_assignment",
+      "declaration_example": "Seokjin sends the weekly report to Taehyun Kim."
+    },
+    {
+      "source": "auth_provider",
+      "target": "auth_method",
+      "pattern": "auth_coupling",
+      "declaration_example": "We use OAuth 2.0 + PKCE since that's what Verithos Auth supports."
+    },
+    {
+      "source": "auth_provider",
+      "target": "token_format",
+      "pattern": "auth_coupling",
+      "declaration_example": "Tokens are Verithos-JWT-v2 format — that's Verithos Auth's standard."
+    },
+    {
+      "source": "auth_provider",
+      "target": "login_endpoint",
+      "pattern": "auth_coupling",
+      "declaration_example": "Login goes through /api/v2/auth/verithos/login — Verithos Auth's endpoint."
+    },
+    {
+      "source": "auth_provider",
+      "target": "user_session_ttl",
+      "pattern": "auth_coupling",
+      "declaration_example": "Verithos Auth defaults to 30 minute sessions for our tier."
+    },
+    {
+      "source": "auth_method",
+      "target": "middleware_config",
+      "pattern": "derived_config",
+      "declaration_example": "For OAuth 2.0 + PKCE we use the verithos-oauth-middleware v2.1 package."
+    }
+  ]
+}

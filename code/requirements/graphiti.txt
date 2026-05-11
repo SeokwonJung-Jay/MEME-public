@@ -1,0 +1,8 @@
+# Graphiti memory system — separate venv recommended due to async/version pinning.
+# Setup: python3 -m venv .venvs/graphiti_env && source .venvs/graphiti_env/bin/activate
+#        pip install -r requirements.txt -r requirements/graphiti.txt
+#
+# Backing service: Neo4j (Bolt port 7687). See scripts/start_neo4j_cluster.sh.
+
+graphiti-core>=0.28
+neo4j>=6.0

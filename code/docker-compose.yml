@@ -1,0 +1,41 @@
+# MEME benchmark backing services
+# Usage:
+#   docker compose up -d        # start Neo4j + Qdrant
+#   docker compose down         # stop
+#
+# Neo4j is required for Graphiti; Qdrant is required for Mem0.
+# Single-instance setup. For parallel Graphiti runs across multiple workers,
+# use scripts/start_neo4j_cluster.sh instead.
+
+services:
+  neo4j:
+    image: neo4j:5
+    container_name: meme-neo4j
+    ports:
+      - "7474:7474"   # HTTP
+      - "7687:7687"   # Bolt
+    environment:
+      NEO4J_AUTH: neo4j/mempass123
+      NEO4J_PLUGINS: '["apoc"]'
+      NEO4J_server_memory_heap_initial__size: 512m
+      NEO4J_server_memory_heap_max__size: 1g
+      NEO4J_server_memory_pagecache_size: 512m
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+    restart: unless-stopped
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: meme-qdrant
+    ports:
+      - "6333:6333"   # HTTP
+      - "6334:6334"   # gRPC
+    volumes:
+      - qdrant_data:/qdrant/storage
+    restart: unless-stopped
+
+volumes:
+  neo4j_data:
+  neo4j_logs:
+  qdrant_data:
