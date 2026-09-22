@@ -26,11 +26,11 @@ from eval.budget_tracker import install_patches, get_tracker
 install_patches()
 
 
-SYSTEM_PROMPT = (
-    "You are answering a question based on a long conversation transcript. "
-    "Read the transcript carefully and answer the question using only information present "
-    "in it. Be concise and answer with the value only."
-)
+# The in-context baseline answers with the SAME prompt as every other system in
+# Table 2 (see agents/base.py). This matters: Deletion is scored on whether the
+# model reports the absence of a removed fact, so a prompt that omits the
+# "say you don't have that information" line collapses that task.
+from agents.base import UNIFIED_ANSWER_PROMPT
 
 
 def _make_client(model: str, api_key: str):
@@ -45,7 +45,7 @@ def _flatten_sessions(sessions, up_to: int) -> str:
     for i in range(min(up_to, len(sessions))):
         sess = sessions[i]
         ts = sess.get("timestamp", f"session_{i}")
-        parts.append(f"[Session {ts}]")
+        parts.append(f"[Session: {ts}]")
         for turn in sess.get("conversation", []):
             role = "User" if turn.get("role") == "user" else "Assistant"
             parts.append(f"{role}: {turn.get('content','')}")
@@ -53,12 +53,10 @@ def _flatten_sessions(sessions, up_to: int) -> str:
 
 
 def _ask(client, model: str, transcript: str, question: str) -> str:
+    prompt = UNIFIED_ANSWER_PROMPT.format(context=transcript, question=question)
     response = client.chat.completions.create(
         model=model,
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": f"Transcript:\n{transcript}\n\nQuestion: {question}"},
-        ],
+        messages=[{"role": "user", "content": prompt}],
         temperature=0,
         max_tokens=500,
     )
