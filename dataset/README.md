@@ -118,10 +118,11 @@ The filtered filler pools used in haystack assembly are released separately at [
 ## Citation
 
 ```bibtex
-@misc{meme2026,
-  title  = {{MEME}: Multi-Entity and Evolving Memory Evaluation},
-  author = {Jung, Seokwon and others},
-  year   = {2026}
+@inproceedings{jung2026meme,
+  title     = {{MEME}: Multi-entity \& Evolving Memory Evaluation},
+  author    = {Jung, Seokwon and Rubinstein, Alexander and Uselis, Arnas and Yun, Sangdoo and Oh, Seong Joon},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS), Evaluations and Datasets Track},
+  year      = {2026}
 }
 ```
 

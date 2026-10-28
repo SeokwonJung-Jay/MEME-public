@@ -22,6 +22,8 @@ code/
   .env.example
 dataset/
   README.md                  # HF dataset card
+results/
+  judge_audit_144.json       # GPT-4o judge vs. author labels (144 samples)
 LICENSE                      # MIT
 ```
 
@@ -111,6 +113,8 @@ After any agent run, judge with:
 source .venvs/main_env/bin/activate
 python -m eval.judge -d <output_dir>/<system> -o <output_dir>/<system>/judge
 ```
+
+The judge audit reported in the paper (144 after-change answers, 142 agreements, Cohen's κ = 0.965) is in `results/judge_audit_144.json`, with the question, gold answer, system answer, judge label, and author label for each sample.
 
 ## Memory system requirements
 
