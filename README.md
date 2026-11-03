@@ -1,7 +1,6 @@
 # MEME Benchmark — Reference Implementation
 
 [![arXiv](https://img.shields.io/badge/arXiv-2605.12477-b31b1b.svg)](https://arxiv.org/abs/2605.12477)
-[![🤗 Paper](https://img.shields.io/badge/🤗_Paper-2605.12477-yellow.svg)](https://huggingface.co/papers/2605.12477)
 [![🤗 MEME](https://img.shields.io/badge/🤗_Data-MEME-yellow.svg)](https://huggingface.co/datasets/meme-benchmark/MEME)
 [![Project page](https://img.shields.io/badge/Project-page-blue.svg)](https://seokwonjung-jay.github.io/meme-eval/)
 
