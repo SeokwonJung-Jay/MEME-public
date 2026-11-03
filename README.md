@@ -1,6 +1,9 @@
 # MEME Benchmark — Reference Implementation
 
+[![arXiv](https://img.shields.io/badge/arXiv-2605.12477-b31b1b.svg)](https://arxiv.org/abs/2605.12477)
+[![🤗 Paper](https://img.shields.io/badge/🤗_Paper-2605.12477-yellow.svg)](https://huggingface.co/papers/2605.12477)
 [![🤗 MEME](https://img.shields.io/badge/🤗_Data-MEME-yellow.svg)](https://huggingface.co/datasets/meme-benchmark/MEME)
+[![Project page](https://img.shields.io/badge/Project-page-blue.svg)](https://seokwonjung-jay.github.io/meme-eval/)
 
 MEME (Multi-Entity and Evolving Memory Evaluation) is a benchmark that evaluates LLM memory systems along the multi-entity and evolving axes. It defines six tasks including three types absent in prior memory benchmarks (Cascade and Absence for dependency reasoning, and Deletion for post-removal state), alongside Tracking, Aggregation, and Exact Recall. This repo contains the reference implementations of six memory systems, the GPT-4o judge pipeline, and the dataset construction pipeline.
 
@@ -132,6 +135,19 @@ The answering LLM (default gpt-4.1-mini) is shared across systems via `--model`.
 ## Regenerating the dataset
 
 The construction pipeline (Stages 1–5 + flatten) is in `code/data/` and `code/dataset_tools/`. Pre-built fillers used in haystack assembly are at [meme-benchmark/MEME-fillers](https://huggingface.co/datasets/meme-benchmark/MEME-fillers); the LLM-judge filter that produced them (`code/data/filter_fillers.py`) requires raw [LongMemEval](https://huggingface.co/datasets/xiaowu0162/longmemeval) and [ShareGPT 52K](https://huggingface.co/datasets/RyokoAI/ShareGPT52K) corpora.
+
+## Citation
+
+Paper: [arXiv:2605.12477](https://arxiv.org/abs/2605.12477) (NeurIPS 2026, Evaluations and Datasets Track).
+
+```bibtex
+@inproceedings{jung2026meme,
+  title     = {{MEME}: Multi-entity \& Evolving Memory Evaluation},
+  author    = {Jung, Seokwon and Rubinstein, Alexander and Uselis, Arnas and Yun, Sangdoo and Oh, Seong Joon},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS), Evaluations and Datasets Track},
+  year      = {2026}
+}
+```
 
 ## License
 
