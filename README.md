@@ -154,4 +154,4 @@ Code: MIT (see `LICENSE`). Dataset: CC BY 4.0, see the dataset card for filler-s
 
 ## Known issues
 
-- **Absence labels (v1.0, [#2](https://github.com/SeokwonJung-Jay/MEME-public/issues/2)).** In 10 of the 130 Absence items, the conversation declares a replacement value for the changed dependency, so the gold should be that value rather than "Uncertain": `pl_009`, `pl_041`, `pl_044`, `pl_047`, `sw_013`, `sw_016`, `sw_020`, `sw_026`, `sw_040`, `sw_048`. No memory system in the paper answers these items correctly, so excluding them changes no reported Absence score by more than 0.004. A corrected release will follow.
+- **Absence labels (v1.0, [#2](https://github.com/SeokwonJung-Jay/MEME-public/issues/2)).** In 10 of the 130 Absence items, the conversation declares a replacement value for the changed dependency, so the gold should be that value rather than "Uncertain": `pl_009`, `pl_041`, `pl_044`, `pl_047`, `sw_013`, `sw_016`, `sw_020`, `sw_026`, `sw_040`, `sw_048`. No memory system in the main table answers these items correctly, so excluding them changes no main-table Absence score by more than 0.004. A corrected release will follow.
